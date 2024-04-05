@@ -1,0 +1,5 @@
+/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles/VKLearn.dir
+/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles/test.dir
+/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles/remove.dir
+/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles/edit_cache.dir
+/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles/rebuild_cache.dir

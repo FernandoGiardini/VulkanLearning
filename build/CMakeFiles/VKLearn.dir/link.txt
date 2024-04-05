@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++17 -O2 -rdynamic CMakeFiles/VKLearn.dir/first_app.cpp.o CMakeFiles/VKLearn.dir/main.cpp.o CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o CMakeFiles/VKLearn.dir/vkl_window.cpp.o -o VKLearn  /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi 
