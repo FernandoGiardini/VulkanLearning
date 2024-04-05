@@ -203,6 +203,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vkl_device.o: vkl_device.cpp.o
+.PHONY : vkl_device.o
+
+# target to build an object file
+vkl_device.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_device.cpp.o
+.PHONY : vkl_device.cpp.o
+
+vkl_device.i: vkl_device.cpp.i
+.PHONY : vkl_device.i
+
+# target to preprocess a source file
+vkl_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_device.cpp.i
+.PHONY : vkl_device.cpp.i
+
+vkl_device.s: vkl_device.cpp.s
+.PHONY : vkl_device.s
+
+# target to generate assembly for a file
+vkl_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_device.cpp.s
+.PHONY : vkl_device.cpp.s
+
 vkl_pipeline.o: vkl_pipeline.cpp.o
 .PHONY : vkl_pipeline.o
 
@@ -268,6 +292,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vkl_device.o"
+	@echo "... vkl_device.i"
+	@echo "... vkl_device.s"
 	@echo "... vkl_pipeline.o"
 	@echo "... vkl_pipeline.i"
 	@echo "... vkl_pipeline.s"

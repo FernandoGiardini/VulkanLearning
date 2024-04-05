@@ -97,10 +97,24 @@ CMakeFiles/VKLearn.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VKLearn.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giardinif/C++/Vulkan_Learning/main.cpp -o CMakeFiles/VKLearn.dir/main.cpp.s
 
+CMakeFiles/VKLearn.dir/vkl_device.cpp.o: CMakeFiles/VKLearn.dir/flags.make
+CMakeFiles/VKLearn.dir/vkl_device.cpp.o: ../vkl_device.cpp
+CMakeFiles/VKLearn.dir/vkl_device.cpp.o: CMakeFiles/VKLearn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VKLearn.dir/vkl_device.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VKLearn.dir/vkl_device.cpp.o -MF CMakeFiles/VKLearn.dir/vkl_device.cpp.o.d -o CMakeFiles/VKLearn.dir/vkl_device.cpp.o -c /home/giardinif/C++/Vulkan_Learning/vkl_device.cpp
+
+CMakeFiles/VKLearn.dir/vkl_device.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VKLearn.dir/vkl_device.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giardinif/C++/Vulkan_Learning/vkl_device.cpp > CMakeFiles/VKLearn.dir/vkl_device.cpp.i
+
+CMakeFiles/VKLearn.dir/vkl_device.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VKLearn.dir/vkl_device.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giardinif/C++/Vulkan_Learning/vkl_device.cpp -o CMakeFiles/VKLearn.dir/vkl_device.cpp.s
+
 CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o: CMakeFiles/VKLearn.dir/flags.make
 CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o: ../vkl_pipeline.cpp
 CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o: CMakeFiles/VKLearn.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o -MF CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o.d -o CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o -c /home/giardinif/C++/Vulkan_Learning/vkl_pipeline.cpp
 
 CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.s: cmake_force
 CMakeFiles/VKLearn.dir/vkl_window.cpp.o: CMakeFiles/VKLearn.dir/flags.make
 CMakeFiles/VKLearn.dir/vkl_window.cpp.o: ../vkl_window.cpp
 CMakeFiles/VKLearn.dir/vkl_window.cpp.o: CMakeFiles/VKLearn.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VKLearn.dir/vkl_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VKLearn.dir/vkl_window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VKLearn.dir/vkl_window.cpp.o -MF CMakeFiles/VKLearn.dir/vkl_window.cpp.o.d -o CMakeFiles/VKLearn.dir/vkl_window.cpp.o -c /home/giardinif/C++/Vulkan_Learning/vkl_window.cpp
 
 CMakeFiles/VKLearn.dir/vkl_window.cpp.i: cmake_force
@@ -129,6 +143,7 @@ CMakeFiles/VKLearn.dir/vkl_window.cpp.s: cmake_force
 VKLearn_OBJECTS = \
 "CMakeFiles/VKLearn.dir/first_app.cpp.o" \
 "CMakeFiles/VKLearn.dir/main.cpp.o" \
+"CMakeFiles/VKLearn.dir/vkl_device.cpp.o" \
 "CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o" \
 "CMakeFiles/VKLearn.dir/vkl_window.cpp.o"
 
@@ -137,12 +152,13 @@ VKLearn_EXTERNAL_OBJECTS =
 
 VKLearn: CMakeFiles/VKLearn.dir/first_app.cpp.o
 VKLearn: CMakeFiles/VKLearn.dir/main.cpp.o
+VKLearn: CMakeFiles/VKLearn.dir/vkl_device.cpp.o
 VKLearn: CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.o
 VKLearn: CMakeFiles/VKLearn.dir/vkl_window.cpp.o
 VKLearn: CMakeFiles/VKLearn.dir/build.make
 VKLearn: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 VKLearn: CMakeFiles/VKLearn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable VKLearn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giardinif/C++/Vulkan_Learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable VKLearn"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VKLearn.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
