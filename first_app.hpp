@@ -2,6 +2,7 @@
 
 #include "vkl_window.hpp"
 #include "vkl_pipeline.hpp"
+#include "vkl_device.hpp"
 
 namespace vkl 
 {
@@ -14,8 +15,13 @@ namespace vkl
             void run();
 
         private:
-        VKL_Window vkl_Window_app_child{WIDTH,HEIGHT,"Hello Vulkan!"};
-        VklPipeline vklPipeline{"../shaders/simple_shader.vert.spv","../shaders/simple_shader.frag.spv"};
+            VKL_Window vkl_Window{WIDTH,HEIGHT,"Hello Vulkan!"};
+            VKL_Device vkl_Device{vkl_Window};
+            VKL_Pipeline vkl_Pipeline{
+                vkl_Device,
+                "../shaders/simple_shader.vert.spv",
+                "../shaders/simple_shader.frag.spv",
+                VKL_Pipeline::defaultPipelineConfigInfo(WIDTH,HEIGHT)};
     };
     
 }

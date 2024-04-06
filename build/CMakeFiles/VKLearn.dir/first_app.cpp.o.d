@@ -139,6 +139,7 @@ CMakeFiles/VKLearn.dir/first_app.cpp.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/giardinif/C++/Vulkan_Learning/vkl_pipeline.hpp \
+ /home/giardinif/C++/Vulkan_Learning/vkl_device.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \

@@ -3,7 +3,7 @@
 namespace vkl{
 
     void FirstApp::run() {
-        while (!vkl_Window_app_child.shouldClose())
+        while (!vkl_Window.shouldClose())
         {
             glfwPollEvents();
         }
