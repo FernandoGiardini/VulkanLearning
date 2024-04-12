@@ -251,6 +251,30 @@ vkl_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_pipeline.cpp.s
 .PHONY : vkl_pipeline.cpp.s
 
+vkl_swap_chain.o: vkl_swap_chain.cpp.o
+.PHONY : vkl_swap_chain.o
+
+# target to build an object file
+vkl_swap_chain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_swap_chain.cpp.o
+.PHONY : vkl_swap_chain.cpp.o
+
+vkl_swap_chain.i: vkl_swap_chain.cpp.i
+.PHONY : vkl_swap_chain.i
+
+# target to preprocess a source file
+vkl_swap_chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_swap_chain.cpp.i
+.PHONY : vkl_swap_chain.cpp.i
+
+vkl_swap_chain.s: vkl_swap_chain.cpp.s
+.PHONY : vkl_swap_chain.s
+
+# target to generate assembly for a file
+vkl_swap_chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VKLearn.dir/build.make CMakeFiles/VKLearn.dir/vkl_swap_chain.cpp.s
+.PHONY : vkl_swap_chain.cpp.s
+
 vkl_window.o: vkl_window.cpp.o
 .PHONY : vkl_window.o
 
@@ -298,6 +322,9 @@ help:
 	@echo "... vkl_pipeline.o"
 	@echo "... vkl_pipeline.i"
 	@echo "... vkl_pipeline.s"
+	@echo "... vkl_swap_chain.o"
+	@echo "... vkl_swap_chain.i"
+	@echo "... vkl_swap_chain.s"
 	@echo "... vkl_window.o"
 	@echo "... vkl_window.i"
 	@echo "... vkl_window.s"
