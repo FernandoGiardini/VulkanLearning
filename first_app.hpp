@@ -4,6 +4,7 @@
 #include "vkl_pipeline.hpp"
 #include "vkl_device.hpp"
 #include "vkl_swap_chain.hpp"
+#include "vkl_model.hpp"
 
 //std
 #include <memory>
@@ -27,6 +28,7 @@ namespace vkl
             void run();
 
         private:
+            void loadModels();
             void createPipelineLayout();
             void createPipeline();
             void createCommandBuffers();
@@ -38,6 +40,7 @@ namespace vkl
             std::unique_ptr<VKL_Pipeline> vkl_Pipeline;
             VkPipelineLayout pipelineLayout;
             std::vector<VkCommandBuffer> commandBuffers;
+            std::unique_ptr<VKL_Model> vkl_Model;
     };
     
 }

@@ -7,6 +7,7 @@ namespace vkl{
 
     
     FirstApp::FirstApp(){
+        loadModels();
         createPipelineLayout();
         createPipeline();
         createCommandBuffers();
@@ -22,6 +23,16 @@ namespace vkl{
             drawFrame();
         }
         vkDeviceWaitIdle(vkl_Device.device());
+    }
+
+    void FirstApp::loadModels(){
+        std::vector<VKL_Model::Vertex> vertices {//inicializa o vector
+            {{0.0f,-0.5f}},//inicializa o vertex de cada modelo e depois o atributo posição (glm vec2) do vertex
+             {{0.5f,0.5f}},
+             {{-0.5f,0.5f}}
+        };
+
+        vkl_Model = std::make_unique<VKL_Model>(vkl_Device,vertices);
     }
 
     void FirstApp::createPipelineLayout() {
@@ -93,7 +104,8 @@ namespace vkl{
             vkCmdBeginRenderPass(commandBuffers[i],&renderPassInfo,VK_SUBPASS_CONTENTS_INLINE);
 
             vkl_Pipeline->bind(commandBuffers[i]);
-            vkCmdDraw(commandBuffers[i],3,1,0,0);
+            vkl_Model->bind(commandBuffers[i]);
+            vkl_Model->draw(commandBuffers[i]);
 
             vkCmdEndRenderPass(commandBuffers[i]);
             if(vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS)
