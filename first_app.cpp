@@ -27,9 +27,9 @@ namespace vkl{
 
     void FirstApp::loadModels(){
         std::vector<VKL_Model::Vertex> vertices {//inicializa o vector
-            {{0.0f,-0.5f}},//inicializa o vertex de cada modelo e depois o atributo posição (glm vec2) do vertex
-             {{0.5f,0.5f}},
-             {{-0.5f,0.5f}}
+            {{0.0f,-0.5f},{1.0f,0.0f,0.0f}},//inicializa o vertex de cada modelo e depois o atributo posição [location 0] (glm vec2) do vertex e por ultimo o atributo cor [location 1](glm vec3)
+             {{0.5f,0.5f},{0.0f,1.0f,0.0f}},
+             {{-0.5f,0.5f},{0.0f,0.0f,1.0f}}
         };
 
         vkl_Model = std::make_unique<VKL_Model>(vkl_Device,vertices);
