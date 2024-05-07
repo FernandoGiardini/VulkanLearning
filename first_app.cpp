@@ -3,6 +3,7 @@
 //std
 #include <stdexcept>
 #include <array>
+#include <cassert>
 namespace vkl{
 
     
@@ -50,6 +51,9 @@ namespace vkl{
     }
 
     void FirstApp::createPipeline() {
+        assert(vkl_SwapChain != nullptr && "Cannot create pipeline before swapchain!");
+        assert(pipelineLayout != nullptr && "Cannot create pipeline before pipeline layout!");
+
         PipelineConfigInfo pipelineConfig{};
         VKL_Pipeline::defaultPipelineConfigInfo(pipelineConfig);
         pipelineConfig.renderPass = vkl_SwapChain->getRenderPass();
@@ -69,9 +73,21 @@ namespace vkl{
             extent = vkl_Window.getExtent();
             glfwWaitEvents();
         }
-
         vkDeviceWaitIdle(vkl_Device.device());
-        vkl_SwapChain = std::make_unique<VKL_SwapChain>(vkl_Device,extent);
+
+        if (vkl_SwapChain == nullptr)
+        {
+            vkl_SwapChain = std::make_unique<VKL_SwapChain>(vkl_Device,extent);
+        } else{
+            vkl_SwapChain = std::make_unique<VKL_SwapChain>(vkl_Device,extent,std::move(vkl_SwapChain));
+            if (vkl_SwapChain->imageCount() != commandBuffers.size())
+            {
+                freeCommandBuffers();
+                createCommandBuffers();
+            }
+            
+        }
+        
         createPipeline();
     }
 
@@ -92,6 +108,16 @@ namespace vkl{
 
      
     };
+
+    void FirstApp::freeCommandBuffers(){
+        vkFreeCommandBuffers(
+            vkl_Device.device(),
+            vkl_Device.getCommandPool(),
+            static_cast<uint32_t>(commandBuffers.size()),
+            commandBuffers.data());
+
+        commandBuffers.clear();
+    }
 
     void FirstApp::recordCommandBuffer(int imageIndex){
         VkCommandBufferBeginInfo beginInfo{};

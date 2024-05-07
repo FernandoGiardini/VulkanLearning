@@ -8,6 +8,7 @@
 // std lib headers
 #include <string>
 #include <vector>
+#include <memory>
 
 namespace vkl {
 
@@ -16,6 +17,7 @@ class VKL_SwapChain {
   static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
 
   VKL_SwapChain(VKL_Device &deviceRef, VkExtent2D windowExtent);
+  VKL_SwapChain(VKL_Device &deviceRef, VkExtent2D windowExtent,std::shared_ptr<VKL_SwapChain> previousSwapChain);
   ~VKL_SwapChain();
 
   VKL_SwapChain(const VKL_SwapChain &) = delete;
@@ -39,6 +41,7 @@ class VKL_SwapChain {
   VkResult submitCommandBuffers(const VkCommandBuffer *buffers, uint32_t *imageIndex);
 
  private:
+  void init();
   void createSwapChain();
   void createImageViews();
   void createDepthResources();
@@ -69,6 +72,7 @@ class VKL_SwapChain {
   VkExtent2D windowExtent;
 
   VkSwapchainKHR swapChain;
+  std::shared_ptr<VKL_SwapChain> oldSwapChain;
 
   std::vector<VkSemaphore> imageAvailableSemaphores;
   std::vector<VkSemaphore> renderFinishedSemaphores;
