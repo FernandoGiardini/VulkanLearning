@@ -33,10 +33,12 @@ namespace vkl
             void createPipeline();
             void createCommandBuffers();
             void drawFrame();
+            void recreateSwapChain();
+            void recordCommandBuffer(int imageIndex);
 
             VKL_Window vkl_Window{WIDTH,HEIGHT,"Hello Vulkan!"};
             VKL_Device vkl_Device{vkl_Window};
-            VKL_SwapChain vkl_SwapChain{vkl_Device,vkl_Window.getExtent()};
+            std::unique_ptr<VKL_SwapChain> vkl_SwapChain;
             std::unique_ptr<VKL_Pipeline> vkl_Pipeline;
             VkPipelineLayout pipelineLayout;
             std::vector<VkCommandBuffer> commandBuffers;
