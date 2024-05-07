@@ -32,7 +32,7 @@ struct PipelineConfigInfo {
 
             //RAII
             VKL_Pipeline(const VKL_Pipeline&) = delete;
-            void operator=(const VKL_Pipeline&) = delete;
+            VKL_Pipeline& operator=(const VKL_Pipeline&) = delete;
 
             //default config
             static PipelineConfigInfo defaultPipelineConfigInfo(uint32_t width,uint32_t height);
